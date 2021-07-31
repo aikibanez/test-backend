@@ -1,0 +1,26 @@
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal_order` datetime DEFAULT NULL,
+  `status_pelunasan` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,,
+  `tanggal_pembayaran` datetime DEFAULT NULL,
+   PRIMARY KEY (`id`));
+
+   LOCK TABLES `order` WRITE;
+   INSERT INTO `order` VALUES (1,'31-07-2021T17:00','Lunas','31-07-2021T19:00');
+   INSERT INTO `order` VALUES (2,'31-07-2021T16:00','Lunas','31-07-2021T19:10');
+   INSERT INTO `order` VALUES (3,'31-07-2021T18:00','Lunas','31-07-2021T19:00');
+
+   CREATE TABLE `detail_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_order` int(11) NOT NULL,
+  `harga` integer NOT NULL,
+  `jumlah` integer NOT NULL,
+  `subtotal` integer DEFAULT NULL,
+   PRIMARY KEY (`id`));
+
+    LOCK TABLES `detail_order` WRITE;
+   INSERT INTO `detail_order` VALUES (1,1,200000,1,200000);
+   INSERT INTO `detail_order` VALUES (2,2,10000,3,30000);
+   INSERT INTO `detail_order` VALUES (3,3,10000,2,20000);
+
+select a.id as id ,a.tanggal_order as tanggal_order,a.status_pelunasan as status, a.tanggal_pembayaran as tanggal_pembayaran,b.subtotal as total,b.jumlah as jumlah_barang from order a, detail_order b where a.id=b.id_order;
