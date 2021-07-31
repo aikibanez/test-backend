@@ -46,4 +46,23 @@ class CompController extends AbstractController
         $res = ["status"=>true,"results"=>$binStr];
         return $this->json($res);
     }
+    public function palindrome()
+    {
+        $request = Request::createFromGlobals();
+        $payloads = json_decode($request->getContent(), true);
+        $palindrome = $payloads['text'];
+    $split = str_split($palindrome);
+    $jml   = strlen($palindrome);
+    $nama2 = "";
+    for ($i=($jml-1); $i >= 0; $i--) { 
+     $nama2 .= $split[$i];
+    }
+
+    if (strtolower($palindrome)==strtolower($nama2)) {
+     $res =  "Palindrom";
+    }else{
+     $res= "bukan palindrom";
+    }
+    return $this->json($res);
+    }
 }

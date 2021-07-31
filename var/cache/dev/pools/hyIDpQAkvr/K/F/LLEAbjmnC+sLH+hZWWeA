@@ -39,7 +39,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                         'path' => '/decimaltobinary',
                         'controller' => 'App\\Controller\\CompController::decimaltobinary',
                         'openapi_context' => [
-                            'summary' => 'Binary to decimal',
+                            'summary' => 'decimal to binary',
                             'requestBody' => [
                                 'content' => [
                                     'application/json' => [
@@ -53,6 +53,31 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                                         ],
                                         'example' => [
                                             'input' => 19,
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                    'palindrom' => [
+                        'method' => 'post',
+                        'path' => '/palindrom',
+                        'controller' => 'App\\Controller\\CompController::palindrome',
+                        'openapi_context' => [
+                            'summary' => 'palindrome',
+                            'requestBody' => [
+                                'content' => [
+                                    'application/json' => [
+                                        'schema' => [
+                                            'type' => 'object',
+                                            'properties' => [
+                                                'text' => [
+                                                    'type' => 'string',
+                                                ],
+                                            ],
+                                        ],
+                                        'example' => [
+                                            'text' => 'kasur rusak adi',
                                         ],
                                     ],
                                 ],

@@ -1,4 +1,4 @@
-<?php //property_name_collection_f9ef334decb6e53c2e5074e45736f771
+<?php //property_name_collection_67ec722e68b0495822f1838833c1fec6
 
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [

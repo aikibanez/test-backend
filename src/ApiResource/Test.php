@@ -40,7 +40,7 @@ use ApiPlatform\Core\Annotation\ApiProperty;
  *          "path"="/decimaltobinary",
  *          "controller"="App\Controller\CompController::decimaltobinary",
  *          "openapi_context"={
- *              "summary"="Binary to decimal",
+ *              "summary"="decimal to binary",
  *              "requestBody"={
  *                   "content"={
  *                      "application/json"={
@@ -52,6 +52,29 @@ use ApiPlatform\Core\Annotation\ApiProperty;
  *                          },
  *                          "example"={
  *                               "input" = 19,
+ *                          }  
+ *                       }
+ *                   }
+ *              }
+ *          }
+ *      },
+ *    "palindrom"={
+ *          "method"="post",
+ *          "path"="/palindrom",
+ *          "controller"="App\Controller\CompController::palindrome",
+ *          "openapi_context"={
+ *              "summary"="palindrome",
+ *              "requestBody"={
+ *                   "content"={
+ *                      "application/json"={
+ *                          "schema"={
+ *                              "type"="object",  
+ *                              "properties"={
+ *                                  "text"= { "type"= "string" },
+ *                              }      
+ *                          },
+ *                          "example"={
+ *                               "text" = "kasur rusak adi",
  *                          }  
  *                       }
  *                   }
@@ -74,43 +97,12 @@ class Test
    * @ApiProperty(identifier=true)
    * @var int
    */
-  public $course_id;
-
-  /** 
-   * @var int
-   * 
-   */
-  public $event_id;
-  /** 
-   * @var string
-   * 
-   */
-  public $title;
+  public $input;
 
   /** 
    * @var string
    * 
    */
-  public $content;
-  /** 
-   * @var string|null
-   * 
-   */
-  public $comment;
-  /** 
-   * @var boolean
-   * 
-   */
-  public $all_day;
-  /** 
-   * @var int
-   * 
-   */
-  public $session_id;
-
-  /** 
-   * @var string
-   * 
-   */
-  public $color;
+  public $text;
+ 
 }

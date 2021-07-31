@@ -10,6 +10,7 @@ return [
     [ // $staticRoutes
         '/api/binarytodecimal' => [[['_route' => 'api_tests_binarytodecimal_collection', '_controller' => 'App\\Controller\\CompController::binarytodecimal', '_format' => null, '_stateless' => null, '_api_resource_class' => 'App\\ApiResource\\Test', '_api_identifiers' => [], '_api_has_composite_identifier' => false, '_api_collection_operation_name' => 'binarytodecimal'], null, ['POST' => 0], null, false, false, null]],
         '/api/decimaltobinary' => [[['_route' => 'api_tests_decimaltobinary_collection', '_controller' => 'App\\Controller\\CompController::decimaltobinary', '_format' => null, '_stateless' => null, '_api_resource_class' => 'App\\ApiResource\\Test', '_api_identifiers' => [], '_api_has_composite_identifier' => false, '_api_collection_operation_name' => 'decimaltobinary'], null, ['POST' => 0], null, false, false, null]],
+        '/api/palindrom' => [[['_route' => 'api_tests_palindrom_collection', '_controller' => 'App\\Controller\\CompController::palindrome', '_format' => null, '_stateless' => null, '_api_resource_class' => 'App\\ApiResource\\Test', '_api_identifiers' => [], '_api_has_composite_identifier' => false, '_api_collection_operation_name' => 'palindrom'], null, ['POST' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
